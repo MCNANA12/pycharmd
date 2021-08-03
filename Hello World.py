@@ -142,3 +142,26 @@ print(f'difference {s}')
 
 s = x.symmetric_difference(y) # All the elements that are in one of the sets
 print(f'symmetric {s}')
+
+# Tuple
+# Tuple is fast list that can not be modified
+
+# Create a tuple
+t = (1,2,3,4)
+print(t)
+
+# Access the elements
+print(f'index: {t[0]}')
+print(f'Slice: {t[2:]}')
+print(f'bool: {3 in t}')
+
+# Assignemnt use the range tuple
+(x,y,z) = (1,2,3)
+print(x)
+print(y)
+print(z)
+
+(x,y,z) = range(1,4)
+print(x)
+print(y)
+print(z)
