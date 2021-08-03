@@ -166,25 +166,39 @@ print(x)
 print(y)
 print(z)
 
-# Tuple
-# Tuple is fast list that can not be modified
+# Dictionary {k:v,k:v}
+# Indexed by keys, which can be any immutable type (changeable)
 
-# Create a tuple
-t = (1,2,3,4)
-print(t)
+# Create a dictionary
+d = {'pet': 'dog', 'age': 5, 'name': 'spot'}
+print(d)
+d = dict(pet='dog', age=5, name='spot')
+print(d)
 
-# Access the elements
-print(f'index: {t[0]}')
-print(f'Slice: {t[2:]}')
-print(f'bool: {3 in t}')
+# Keys and Values, When you go look something up we cant do it by index have to do it by keys
+print(f'Items:{d.items()}')
+print(f'Keys: {d.keys()}')
+print(f'Values:{d.values()}')
 
-# Assignemnt use the range tuple
-(x,y,z) = (1,2,3)
-print(x)
-print(y)
-print(z)
+# Getting a value from the key
+print(f'name:{d["name"]}')
+#print(f'Test: {d["bla"]}') Will throw an error if the is not found
 
-(x,y,z) = range(1,4)
-print(x)
-print(y)
-print(z)
+# Add an item
+d['trick'] = 'sit'
+print(d)
+d ['trick'] = 'Suck'
+print(d)
+
+# Removing an item
+del d['trick']
+print(d)
+
+# Testing for existence
+if 'name' in d:
+    print(d['name'])
+
+# Looping
+for key in d.keys():
+    print(f'{key} = {d[key]}')
+# Printing Existence within the library
